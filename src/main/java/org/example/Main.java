@@ -1,17 +1,32 @@
 package org.example;
+import java.util.ArrayList;
+import java.util.Collections;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        ArrayList<Course> courses = new ArrayList<>();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+        courses.add(new Course("420-SN1-RE", "Programming in Science", 3));
+        courses.add(new Course("420-SN2-RE", "Advanced Programming", 3));
+        courses.add(new Course("201-NYA-05", "Calculus I", 4));
+        courses.add(new Course("201-NYB-05", "Calculus II", 4));
+        courses.add(new Course("505-ZEN-05", "General Psychology", 2));
+        courses.add(new Course("603-101-MQ", "English Communication", 2));
+        /*
+        System.out.println(course1);
+        System.out.println(course2);
+        System.out.println(course3);
+        System.out.println(course4);
+        System.out.println(course5);
+        System.out.println(course6);
+         */
+
+        Collections.sort(courses);
+
+        for(Course course : courses){
+            System.out.println(course);
         }
     }
 }
+
