@@ -37,6 +37,12 @@ public class Main {
             courses.sort(Comparator.comparingInt(Course::getCredits)
                     .thenComparing(Course::getName));
             printCourses(courses);
+
+            /*
+             Comparable: defines one default ordering inside the class.
+             Comparator: defines additional or alternative ordering without modifying the class.
+             */
+
         }
     }
 
@@ -48,5 +54,7 @@ public class Main {
 
             System.out.println("----------------------------------------");
     }
+
+
  }
 
