@@ -1,8 +1,10 @@
 package org.example;
+import java.util.Comparator;
 
-public class CourseNameComparator implements Comparable<Course>{
+public class CourseNameComparator implements Comparator<Course>{
 
-        public int compareTo(Course c1, Course c2) {
+        @Override
+        public int compare(Course c1, Course c2) {
             return c1.getName().compareTo(c2.getName());
         }
 }

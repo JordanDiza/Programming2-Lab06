@@ -1,8 +1,10 @@
 package org.example;
+import java.util.Comparator;
 
-public class CreditsThenNameComparator implements Comparable<Course>{
+public class CreditsThenNameComparator implements Comparator<Course>{
 
-    public int compareTo(Course c1, Course c2) {
+    @Override
+    public int compare(Course c1, Course c2) {
         int creditComparison = Integer.compare(c1.getCredits(), c2.getCredits());
 
         if (creditComparison != 0) {

@@ -1,6 +1,7 @@
 package org.example;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 
 public class Main {
@@ -26,7 +27,26 @@ public class Main {
 
         for(Course course : courses){
             System.out.println(course);
+
+            Collections.sort(courses);
+            printCourses(courses);
+
+            courses.sort(Comparator.comparingInt(Course::getCredits));
+            printCourses(courses);
+
+            courses.sort(Comparator.comparingInt(Course::getCredits)
+                    .thenComparing(Course::getName));
+            printCourses(courses);
         }
     }
-}
+
+    public static void printCourses(ArrayList<Course> courses){
+
+            for (Course c : courses) {
+                System.out.println(c);
+            }
+
+            System.out.println("----------------------------------------");
+    }
+ }
 
